@@ -206,11 +206,14 @@ select username,passwd from users;
 | guest    | $2y$10$89otZrRNmde97rIyzclecuk6LwKAsHN0BcvoOKGjbT.BwMBfm7G06 |
 | andrew   | REDACTED                                                     |
 
+```
 The user "andrew" is present in the passwd document in the zabbix server and have an HOME directory. Let's broke the hash to try the password on the host !
+
 
 ```
 echo 'REDACTED_HASH' > 4john && john 4john --wordlist=/usr/share/wordlists/seclists/Password/xato-net-10-million-passwords.txt
 ```
+
 
 Now we have an SSH access with this new user "andrew".
 
