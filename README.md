@@ -226,7 +226,8 @@ echo DEVICE=$(cat device.txt) >> /etc/sysconfig/network-scripts/ifcfg-1337
 
 ```
 
-# For PrivEsc, we can abuse the "network-scripts" using an know vulnerability found here : https://vulmon.com/exploitdetails?qidtp=maillist_fulldisclosure&qid=e026a0c5f83df4fd532442e1324ffa4f
+# PrivEsc
+We can abuse the "network-scripts" using an know vulnerability found here : https://vulmon.com/exploitdetails?qidtp=maillist_fulldisclosure&qid=e026a0c5f83df4fd532442e1324ffa4f
 
 # exploiting network-script :
 
