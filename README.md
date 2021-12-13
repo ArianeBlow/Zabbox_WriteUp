@@ -185,9 +185,10 @@ nc -lnvp 9999
 ```
 
 
-# Now we have to lunch it, to do that go on "Monitoring" tab, clic on the zabbix server and select the script created before. Result a reverse shell on the Zabbix Host.
+# Now we have to lunch it, 
+to do that go on "Monitoring" tab, clic on the zabbix server and select the script created before. Result a reverse shell on the Zabbix Host.
 
-# Stabilize the shell using Spawn TTY (python's not installed) :
+# Stabilize the shell using script methode (python's not installed) :
 ```
 /usr/bin/script -qc /bin/bash /dev/null
 ```
