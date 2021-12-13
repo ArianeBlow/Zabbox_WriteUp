@@ -22,7 +22,7 @@ PORT      STATE SERVICE             VERSION
 
 
 # Port 10020 look intresting : 
-Let's try a connexion useing NETCAT
+Let's try a connexion using NETCAT
 
 ```
 
@@ -152,7 +152,7 @@ Admin Account Password :
 REDACTED
 ```
 
-# Let's found and exploitation for Zabbix !
+# Let's found an exploitation for Zabbix !
 
 A classic one is a CVE-2013-3628 but the MSF exploit doesn't work properly, We have to exploit this vulnerability manually.
 Do to that go on "Administration" Tab (and find the app_flag) and create a new script.
@@ -187,12 +187,12 @@ nc -lnvp 9999
 
 # Now we have to lunch it, to do that go on "Monitoring" tab, clic on the zabbix server and select the script created before. Result a reverse shell on the Zabbix Host.
 
-# Stabilize the shell using Spawn TTY :
+# Stabilize the shell using Spawn TTY (python's not installed) :
 ```
 /usr/bin/script -qc /bin/bash /dev/null
 ```
 
-# zabbix user can run mysql as root without password.
+# The mysql user "root" don't have any password.
 
 Dumping the username and password from the "users" table in the ZABBIX database: 
 
@@ -211,7 +211,7 @@ The user "andrew" is present in the passwd document in the zabbix server and hav
 echo 'REDACTED_HASH' > 4john && john 4john --wordlist=/usr/share/wordlists/seclists/Password/xato-net-10-million-passwords.txt
 ```
 
-Now we have an SSH account with the user "andrew".
+Now we have an SSH access with this new user "andrew".
 
 # An SUID is present on a ELF executable in the andrew HOME directory nammed "vpn".
 
