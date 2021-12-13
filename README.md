@@ -274,4 +274,6 @@ ARI{REDACTED}base64: invalid input
 
 ```
 
-## GALE OVER !
+
+
+## GAME OVER !
